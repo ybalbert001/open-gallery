@@ -65,7 +65,9 @@ RUN git clone https://github.com/crystian/ComfyUI-Crystools /tmp/custom_nodes/Co
 RUN git clone https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git /tmp/custom_nodes/ComfyUI-VideoHelperSuite
 
 # KJ node
-RUN git clone https://github.com/kijai/ComfyUI-KJNodes.git /tmp/custom_nodes/ComfyUI-KJNodes
+RUN git clone https://github.com/kijai/ComfyUI-KJNodes.git /tmp/custom_nodes/ComfyUI-KJNodes && \
+    cd /tmp/custom_nodes/ComfyUI-KJNodes && \
+    pip install -r requirements.txt
 
 # ComfyUI Manager
 RUN git clone https://github.com/ltdrdata/ComfyUI-Manager.git /tmp/custom_nodes/ComfyUI-Manager && \
@@ -73,10 +75,14 @@ RUN git clone https://github.com/ltdrdata/ComfyUI-Manager.git /tmp/custom_nodes/
     pip install -r requirements.txt
 
 # WAS Node Suite
-RUN git clone https://github.com/WASasquatch/was-node-suite-comfyui /tmp/custom_nodes/was-node-suite-comfyui
+RUN git clone https://github.com/WASasquatch/was-node-suite-comfyui /tmp/custom_nodes/was-node-suite-comfyui && \
+    cd /tmp/custom_nodes/was-node-suite-comfyui && \
+    pip install -r requirements.txt
 
 # Tooling Nodes
-RUN git clone https://github.com/Acly/comfyui-tooling-nodes.git /tmp/custom_nodes/comfyui-tooling-nodes
+RUN git clone https://github.com/Acly/comfyui-tooling-nodes.git /tmp/custom_nodes/comfyui-tooling-nodes && \
+    cd /tmp/custom_nodes/comfyui-tooling-nodes && \
+    pip install -r requirements.txt
 
 ### Video Generation Nodes ###
 # Wan Video Wrapper
@@ -109,14 +115,35 @@ RUN git clone https://github.com/qingyuan18/comfyui-llm-node-for-amazon-bedrock.
 
 
 # flux & wan trainer node
-RUN git clone https://github.com/jaimitoes/ComfyUI_Wan2_1_lora_trainer.git /tmp/custom_nodes/ComfyUI_Wan2_1_lora_trainer
-RUN git clone https://github.com/kijai/ComfyUI-FluxTrainer.git /tmp/custom_nodes/ComfyUI-FluxTrainer
-RUN git clone https://github.com/aidenli/ComfyUI_NYJY.git /tmp/custom_nodes/ComfyUI_NYJY
-RUN git clone https://github.com/kijai/ComfyUI-Florence2.git /tmp/custom_nodes/ComfyUI-Florence2
+RUN git clone https://github.com/jaimitoes/ComfyUI_Wan2_1_lora_trainer.git /tmp/custom_nodes/ComfyUI_Wan2_1_lora_trainer && \
+    cd /tmp/custom_nodes/ComfyUI_Wan2_1_lora_trainer && \
+    pip install -r requirements.txt
+
+RUN git clone https://github.com/kijai/ComfyUI-FluxTrainer.git /tmp/custom_nodes/ComfyUI-FluxTrainer && \
+    cd /tmp/custom_nodes/ComfyUI-FluxTrainer && \
+    pip install -r requirements.txt
+
+RUN git clone https://github.com/aidenli/ComfyUI_NYJY.git /tmp/custom_nodes/ComfyUI_NYJY && \
+    cd /tmp/custom_nodes/ComfyUI_NYJY && \
+    pip install -r requirements.txt
+
+RUN git clone https://github.com/kijai/ComfyUI-Florence2.git /tmp/custom_nodes/ComfyUI-Florence2 && \
+    cd /tmp/custom_nodes/ComfyUI-Florence2 && \
+    pip install -r requirements.txt
+
 RUN git clone https://github.com/No-22-Github/ComfyUI_SaveImageCustom.git /tmp/custom_nodes/ComfyUI_SaveImageCustom
-RUN git clone https://github.com/pythongosssss/ComfyUI-WD14-Tagger.git /tmp/custom_nodes/ComfyUI-WD14-Tagger
-RUN git clone https://github.com/alexgenovese/ComfyUI_HF_Servelress_Inference.git /tmp/custom_nodes/ComfyUI_HF_Servelress_Inference
-RUN git clone https://github.com/cubiq/ComfyUI_essentials.git /tmp/custom_nodes/ComfyUI_essentials
+
+RUN git clone https://github.com/pythongosssss/ComfyUI-WD14-Tagger.git /tmp/custom_nodes/ComfyUI-WD14-Tagger && \
+    cd /tmp/custom_nodes/ComfyUI-WD14-Tagger && \
+    pip install -r requirements.txt
+
+RUN git clone https://github.com/alexgenovese/ComfyUI_HF_Servelress_Inference.git /tmp/custom_nodes/ComfyUI_HF_Servelress_Inference && \
+    cd /tmp/custom_nodes/ComfyUI_HF_Servelress_Inference && \
+    pip install -r requirements.txt
+
+RUN git clone https://github.com/cubiq/ComfyUI_essentials.git /tmp/custom_nodes/ComfyUI_essentials && \
+    cd /tmp/custom_nodes/ComfyUI_essentials && \
+    pip install -r requirements.txt
 # 
 
 ###############################################################################
