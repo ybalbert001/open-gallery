@@ -25,7 +25,7 @@ spec:
         # Service account for AWS IAM permissions (DynamoDB, S3, Bedrock)
         serviceAccountName: open-gallery-sa
         nodeSelector:
-          workload: cpu
+          node.kubernetes.io/instance-type: "ml.c5.2xlarge"
         containers:
         - name: open-gallery
           # Replace with your ECR image URL

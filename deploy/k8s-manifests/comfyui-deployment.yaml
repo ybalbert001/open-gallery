@@ -24,7 +24,7 @@ spec:
         version: v1
     spec:
       nodeSelector:
-        workload: gpu
+        node.kubernetes.io/instance-type: "ml.g6e.12xlarge"
       # Optional: Use tolerations if you have taints on GPU nodes
       # tolerations:
       # - key: nvidia.com/gpu
@@ -44,6 +44,7 @@ spec:
         - |
           mkdir -p /tmp/comfyui-logs
           echo "🚀 Starting ComfyUI at $(date)" | tee /tmp/comfyui-logs/comfyui_runtime.log
+          cp -r /tmp/custom_nodes/* /opt/program/custom_nodes/
           python -u main.py --listen 0.0.0.0 --port 8188 2>&1 | tee -a /tmp/comfyui-logs/comfyui_runtime.log
 
         ports:
@@ -83,7 +84,10 @@ spec:
         # Mount NVMe models via hostPath
         - name: nvme-host
           mountPath: /opt/program/models
-          readOnly: true
+          readOnly: false
+        - name: custom-nodes-presistent-storage
+          mountPath: /opt/program/custom_nodes
+          readOnly: false
 
         # Environment variables
         env:
@@ -109,9 +113,12 @@ spec:
 
       # Volumes
       volumes:
-      # NVMe hostPath for models
       - name: nvme-host
         hostPath:
           path: /opt/dlami/nvme/comfyui-models
           type: DirectoryOrCreate
-
+      # 新增：custom_nodes 持久化卷
+      - name: custom-nodes-presistent-storage
+        hostPath:
+          path: /opt/dlami/nvme/comfyui-custom-nodes
+          type: DirectoryOrCreate

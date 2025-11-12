@@ -31,7 +31,7 @@ spec:
     spec:
       serviceAccountName: comfyui-prewarm-sa
       nodeSelector:
-        workload: gpu
+        node.kubernetes.io/instance-type: "ml.g6e.12xlarge"
       containers:
       - name: prewarm
         image: ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/daemonset-s3-sync:latest

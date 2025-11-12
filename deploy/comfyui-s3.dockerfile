@@ -53,70 +53,70 @@ RUN pip install retry
 ###############################################################################
 
 ### Core Custom Nodes ###
-RUN git clone https://github.com/Fannovel16/comfyui_controlnet_aux.git /opt/program/custom_nodes/comfyui_controlnet_aux
+RUN git clone https://github.com/Fannovel16/comfyui_controlnet_aux.git /tmp/custom_nodes/comfyui_controlnet_aux
 
-RUN git clone https://github.com/pythongosssss/ComfyUI-Custom-Scripts.git /opt/program/custom_nodes/ComfyUI-Custom-Scripts
+RUN git clone https://github.com/pythongosssss/ComfyUI-Custom-Scripts.git /tmp/custom_nodes/ComfyUI-Custom-Scripts
 
-RUN git clone https://github.com/crystian/ComfyUI-Crystools /opt/program/custom_nodes/ComfyUI-Crystools && \
-    cd /opt/program/custom_nodes/ComfyUI-Crystools && \
+RUN git clone https://github.com/crystian/ComfyUI-Crystools /tmp/custom_nodes/ComfyUI-Crystools && \
+    cd /tmp/custom_nodes/ComfyUI-Crystools && \
     pip install -r requirements.txt
 
 # video suite
-RUN git clone https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git /opt/program/custom_nodes/ComfyUI-VideoHelperSuite
+RUN git clone https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git /tmp/custom_nodes/ComfyUI-VideoHelperSuite
 
 # KJ node
-RUN git clone https://github.com/kijai/ComfyUI-KJNodes.git /opt/program/custom_nodes/ComfyUI-KJNodes
+RUN git clone https://github.com/kijai/ComfyUI-KJNodes.git /tmp/custom_nodes/ComfyUI-KJNodes
 
 # ComfyUI Manager
-RUN git clone https://github.com/ltdrdata/ComfyUI-Manager.git /opt/program/custom_nodes/ComfyUI-Manager && \
-    cd /opt/program/custom_nodes/ComfyUI-Manager && \
+RUN git clone https://github.com/ltdrdata/ComfyUI-Manager.git /tmp/custom_nodes/ComfyUI-Manager && \
+    cd /tmp/custom_nodes/ComfyUI-Manager && \
     pip install -r requirements.txt
 
 # WAS Node Suite
-RUN git clone https://github.com/WASasquatch/was-node-suite-comfyui /opt/program/custom_nodes/was-node-suite-comfyui
+RUN git clone https://github.com/WASasquatch/was-node-suite-comfyui /tmp/custom_nodes/was-node-suite-comfyui
 
 # Tooling Nodes
-RUN git clone https://github.com/Acly/comfyui-tooling-nodes.git /opt/program/custom_nodes/comfyui-tooling-nodes
+RUN git clone https://github.com/Acly/comfyui-tooling-nodes.git /tmp/custom_nodes/comfyui-tooling-nodes
 
 ### Video Generation Nodes ###
 # Wan Video Wrapper
-RUN git clone https://github.com/kijai/ComfyUI-WanVideoWrapper.git /opt/program/custom_nodes/ComfyUI-WanVideoWrapper && \
-    cd /opt/program/custom_nodes/ComfyUI-WanVideoWrapper && \
+RUN git clone https://github.com/kijai/ComfyUI-WanVideoWrapper.git /tmp/custom_nodes/ComfyUI-WanVideoWrapper && \
+    cd /tmp/custom_nodes/ComfyUI-WanVideoWrapper && \
     pip install -r requirements.txt
 
 ### Image Editing Nodes ###
 # Qwen Edit Utils
-RUN git clone https://github.com/lrzjason/Comfyui-QwenEditUtils /opt/program/custom_nodes/Comfyui-QwenEditUtils
+RUN git clone https://github.com/lrzjason/Comfyui-QwenEditUtils /tmp/custom_nodes/Comfyui-QwenEditUtils
 
 # Layer Style (latest branch)
-RUN git clone -b latest https://github.com/qingyuan18/ComfyUI_LayerStyle.git /opt/program/custom_nodes/ComfyUI_LayerStyle && \
-    cd /opt/program/custom_nodes/ComfyUI_LayerStyle && \
+RUN git clone -b latest https://github.com/qingyuan18/ComfyUI_LayerStyle.git /tmp/custom_nodes/ComfyUI_LayerStyle && \
+    cd /tmp/custom_nodes/ComfyUI_LayerStyle && \
     pip install -r requirements.txt
 
 # Layer Style Advance
-RUN git clone https://github.com/chflame163/ComfyUI_LayerStyle_Advance.git /opt/program/custom_nodes/ComfyUI_LayerStyle_Advance && \
-    cd /opt/program/custom_nodes/ComfyUI_LayerStyle_Advance && \
+RUN git clone https://github.com/chflame163/ComfyUI_LayerStyle_Advance.git /tmp/custom_nodes/ComfyUI_LayerStyle_Advance && \
+    cd /tmp/custom_nodes/ComfyUI_LayerStyle_Advance && \
     pip install -r requirements.txt
 
 ### Utility Nodes ###
 # Easy Use
-RUN git clone https://github.com/yolain/ComfyUI-Easy-Use.git /opt/program/custom_nodes/ComfyUI-Easy-Use && \
-    cd /opt/program/custom_nodes/ComfyUI-Easy-Use && \
+RUN git clone https://github.com/yolain/ComfyUI-Easy-Use.git /tmp/custom_nodes/ComfyUI-Easy-Use && \
+    cd /tmp/custom_nodes/ComfyUI-Easy-Use && \
     pip install -r requirements.txt
 
 # Amazon Bedrock LLM Node
-RUN git clone https://github.com/qingyuan18/comfyui-llm-node-for-amazon-bedrock.git /opt/program/custom_nodes/comfyui-llm-node-for-amazon-bedrock
+RUN git clone https://github.com/qingyuan18/comfyui-llm-node-for-amazon-bedrock.git /tmp/custom_nodes/comfyui-llm-node-for-amazon-bedrock
 
 
 # flux & wan trainer node
-RUN git clone https://github.com/jaimitoes/ComfyUI_Wan2_1_lora_trainer.git /opt/program/customer_nodes/ComfyUI_Wan2_1_lora_trainer
-RUN git clone https://github.com/kijai/ComfyUI-FluxTrainer.git /opt/program/customer_nodes/ComfyUI-FluxTrainer
-RUN git clone https://github.com/aidenli/ComfyUI_NYJY.git /opt/program/customer_nodes/ComfyUI_NYJY
-RUN git clone https://github.com/kijai/ComfyUI-Florence2.git /opt/program/customer_nodes/ComfyUI-Florence2
-RUN git clone https://github.com/No-22-Github/ComfyUI_SaveImageCustom.git /opt/program/customer_nodes/ComfyUI_SaveImageCustom
-RUN git clone https://github.com/pythongosssss/ComfyUI-WD14-Tagger.git /opt/program/customer_nodes/ComfyUI-WD14-Tagger
-RUN git clone https://github.com/alexgenovese/ComfyUI_HF_Servelress_Inference.git /opt/program/customer_nodes/ComfyUI_HF_Servelress_Inference
-RUN git clone https://github.com/cubiq/ComfyUI_essentials.git /opt/program/customer_nodes/ComfyUI_essentials
+RUN git clone https://github.com/jaimitoes/ComfyUI_Wan2_1_lora_trainer.git /tmp/customer_nodes/ComfyUI_Wan2_1_lora_trainer
+RUN git clone https://github.com/kijai/ComfyUI-FluxTrainer.git /tmp/customer_nodes/ComfyUI-FluxTrainer
+RUN git clone https://github.com/aidenli/ComfyUI_NYJY.git /tmp/customer_nodes/ComfyUI_NYJY
+RUN git clone https://github.com/kijai/ComfyUI-Florence2.git /tmp/customer_nodes/ComfyUI-Florence2
+RUN git clone https://github.com/No-22-Github/ComfyUI_SaveImageCustom.git /tmp/customer_nodes/ComfyUI_SaveImageCustom
+RUN git clone https://github.com/pythongosssss/ComfyUI-WD14-Tagger.git /tmp/customer_nodes/ComfyUI-WD14-Tagger
+RUN git clone https://github.com/alexgenovese/ComfyUI_HF_Servelress_Inference.git /tmp/customer_nodes/ComfyUI_HF_Servelress_Inference
+RUN git clone https://github.com/cubiq/ComfyUI_essentials.git /tmp/customer_nodes/ComfyUI_essentials
 # 
 
 ###############################################################################
