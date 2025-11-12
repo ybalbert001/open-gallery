@@ -109,14 +109,14 @@ RUN git clone https://github.com/qingyuan18/comfyui-llm-node-for-amazon-bedrock.
 
 
 # flux & wan trainer node
-RUN git clone https://github.com/jaimitoes/ComfyUI_Wan2_1_lora_trainer.git /tmp/customer_nodes/ComfyUI_Wan2_1_lora_trainer
-RUN git clone https://github.com/kijai/ComfyUI-FluxTrainer.git /tmp/customer_nodes/ComfyUI-FluxTrainer
-RUN git clone https://github.com/aidenli/ComfyUI_NYJY.git /tmp/customer_nodes/ComfyUI_NYJY
-RUN git clone https://github.com/kijai/ComfyUI-Florence2.git /tmp/customer_nodes/ComfyUI-Florence2
-RUN git clone https://github.com/No-22-Github/ComfyUI_SaveImageCustom.git /tmp/customer_nodes/ComfyUI_SaveImageCustom
-RUN git clone https://github.com/pythongosssss/ComfyUI-WD14-Tagger.git /tmp/customer_nodes/ComfyUI-WD14-Tagger
-RUN git clone https://github.com/alexgenovese/ComfyUI_HF_Servelress_Inference.git /tmp/customer_nodes/ComfyUI_HF_Servelress_Inference
-RUN git clone https://github.com/cubiq/ComfyUI_essentials.git /tmp/customer_nodes/ComfyUI_essentials
+RUN git clone https://github.com/jaimitoes/ComfyUI_Wan2_1_lora_trainer.git /tmp/custom_nodes/ComfyUI_Wan2_1_lora_trainer
+RUN git clone https://github.com/kijai/ComfyUI-FluxTrainer.git /tmp/custom_nodes/ComfyUI-FluxTrainer
+RUN git clone https://github.com/aidenli/ComfyUI_NYJY.git /tmp/custom_nodes/ComfyUI_NYJY
+RUN git clone https://github.com/kijai/ComfyUI-Florence2.git /tmp/custom_nodes/ComfyUI-Florence2
+RUN git clone https://github.com/No-22-Github/ComfyUI_SaveImageCustom.git /tmp/custom_nodes/ComfyUI_SaveImageCustom
+RUN git clone https://github.com/pythongosssss/ComfyUI-WD14-Tagger.git /tmp/custom_nodes/ComfyUI-WD14-Tagger
+RUN git clone https://github.com/alexgenovese/ComfyUI_HF_Servelress_Inference.git /tmp/custom_nodes/ComfyUI_HF_Servelress_Inference
+RUN git clone https://github.com/cubiq/ComfyUI_essentials.git /tmp/custom_nodes/ComfyUI_essentials
 # 
 
 ###############################################################################
