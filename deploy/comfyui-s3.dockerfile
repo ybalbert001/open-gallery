@@ -35,6 +35,9 @@ ENV export FORCE_CUDA=1
 ####install ComfyUI
 # Clone ComfyUI from official repository
 WORKDIR /opt/program
+
+RUN MAX_JOBS=4 pip install flash-attn==2.0.1 --no-build-isolation
+
 RUN git clone https://github.com/comfyanonymous/ComfyUI.git /tmp/comfyui && \
     cp -r /tmp/comfyui/* /opt/program/ && \
     rm -rf /tmp/comfyui
