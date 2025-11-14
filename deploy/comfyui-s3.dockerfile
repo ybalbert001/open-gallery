@@ -115,7 +115,7 @@ RUN git clone https://github.com/yolain/ComfyUI-Easy-Use.git /tmp/custom_nodes/C
 
 
 # flux & wan trainer node
-RUN git clone https://github.com/jaimitoes/ComfyUI_Wan2_1_lora_trainer.git /tmp/custom_nodes/ComfyUI_Wan2_1_lora_trainer && \
+RUN git clone https://github.com/ybalbert001/ComfyUI_Wan2_1_lora_trainer.git /tmp/custom_nodes/ComfyUI_Wan2_1_lora_trainer && \
     cd /tmp/custom_nodes/ComfyUI_Wan2_1_lora_trainer && \
     pip install -r requirements.txt --no-build-isolation
 
