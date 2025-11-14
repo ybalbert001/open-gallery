@@ -88,6 +88,9 @@ spec:
         - name: custom-nodes-presistent-storage
           mountPath: /opt/program/custom_nodes
           readOnly: false
+        - name: s3-bucket
+          mountPath: /opt/program/s3_bucket
+          readOnly: false
 
         # Environment variables
         env:
@@ -113,6 +116,9 @@ spec:
 
       # Volumes
       volumes:
+      - name: s3-bucket
+        persistentVolumeClaim:
+          claimName: comfyui-models-pvc
       - name: nvme-host
         hostPath:
           path: /opt/dlami/nvme/comfyui-models
