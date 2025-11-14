@@ -118,7 +118,7 @@ spec:
       volumes:
       - name: s3-bucket
         persistentVolumeClaim:
-          claimName: comfyui-models-pvc
+          claimName: s3-claim
       - name: nvme-host
         hostPath:
           path: /opt/dlami/nvme/comfyui-models
