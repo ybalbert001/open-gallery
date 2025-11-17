@@ -165,7 +165,16 @@ RUN pip install "pydantic>=2.7,<3" "typing_extensions>=4.12.2"
 #### Upgrade torch/torchvision/cuda dependencies FIRST (before OpenCV)
 #RUN pip install -U --force-reinstall torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
 
+# legacy flash attn lib
+# Install ninja for faster compilation
+RUN pip install ninja
 
+# Install flash-attention with verbose output
+RUN pip uninstall -y flash_attn
+RUN git clone -b v2.0.1 https://github.com/Dao-AILab/flash-attention.git /tmp/flash-attention && \
+    cd /tmp/flash-attention && \
+    MAX_JOBS=4 python setup.py install --verbose && \
+    cd / && rm -rf /tmp/flash-attention
 
 #### Install SageAttention (optional performance optimization)
 # Use non-editable install to avoid pip 25.0 deprecation warning
